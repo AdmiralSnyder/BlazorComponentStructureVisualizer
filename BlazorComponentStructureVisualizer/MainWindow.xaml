@@ -1,0 +1,27 @@
+﻿<Window x:Class="BlazorComponentStructureVisualizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfgraphcontrol="http://mlsagl"
+
+        xmlns:local="clr-namespace:BlazorComponentStructureVisualizer"
+        mc:Ignorable="d"
+        Title="Blazor component hierarchy explorer              &lt;EmitCompilerGeneratedFiles>true&lt;/EmitCompilerGeneratedFiles>" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition>
+                </ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition></Grid.ColumnDefinitions>
+            <TextBox TextWrapping="Wrap" Grid.Column="0" x:Name="PathTB" Text="C:\Users\Admin\source\repos\BlazorApp1\BlazorApp1\obj\Debug\net8.0\generated\Microsoft.NET.Sdk.Razor.SourceGenerators\Microsoft.NET.Sdk.Razor.SourceGenerators.RazorSourceGenerator"></TextBox>
+            <Button Grid.Column="1" x:Name="LoadB" Click="LoadB_Click">Load</Button>
+        </Grid>
+        <wpfgraphcontrol:AutomaticGraphLayoutControl x:Name="graphControl" Grid.Row="1" />
+    </Grid>
+</Window>
